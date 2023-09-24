@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" action="/edit/<%= response.id %>?_method=PUT" enctype="multipart/form-data">
+    &nbsp&nbsp First name
+    <input type="text" name="Username" value="<%=response.Username %>">
+    Phone_Number
+    <input type="text" name="Phone_Number" value="<%=response.Phone_Number %>" >
+    Age
+    <input type="text" name="Age" value="<%=response.Age %>">
+    Email
+    <input type="text" name="Email" value="<%=response.Email %>" >
+    Salary
+    <input type="text" name="Salary" value="<%=response.Salary %>">
+    
+    
+    &nbsp&nbsp password
+    <input type="password" name="Password" value="<%=response.Password%>">
+    <!-- Verified <input type= "checkbox" id= "s1" class= "lg" name= "Verified" value="<%=response.Verified%>">
+      -->
+      <% if ( response.verified) { %>
+        verified <input type="checkbox" id="verified" name="Verified" checked >
+         <% }else{ %>
+          verified  <input type="checkbox" id="verified" name="Verified"  >
+              <% } %>
+        <input type="file" name="image"  />
+               
+                
+    <input type="submit" value="save" >
+</form>
+    
+</body>
+</html>
